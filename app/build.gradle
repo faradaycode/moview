@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk 33
+    buildToolsVersion '32.0.0'
+    defaultConfig {
+        applicationId "com.movie.mandiri"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "0.0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def room_version = "2.3.0"
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation "androidx.gridlayout:gridlayout:1.0.0"
+
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation files('libs/itextpdf-5.5.9.jar')
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //retrofit stuff
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+    implementation "com.squareup.okhttp3:okhttp:4.8.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+
+    // rx
+    implementation "io.reactivex.rxjava2:rxjava:2.2.10"
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+    implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
+
+    testImplementation "android.arch.persistence.room:testing:1.1.1"
+    testImplementation 'junit:junit:4.13.2'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.12.0') {
+        exclude group: 'glide-parent'
+    }
+
+    def dagger_version = "2.43"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    //loading
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    implementation 'com.github.nestoleh:bottomsheet-spinner:0.1.5'
+
+    //Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+}

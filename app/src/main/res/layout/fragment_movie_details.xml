@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_border"
+    tools:context="com.movie.mandiri.fragments.MovieDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/imposter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp5"
+                android:scaleType="fitXY" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_play_arrow_24"
+                app:backgroundTint="@android:color/holo_red_dark"
+                app:fabSize="normal"
+                app:tint="@android:color/white" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvjudul"
+            style="@style/Deifr.BlackBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gap16"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:columnCount="2"
+            app:useDefaultMargins="true">
+
+            <TextView
+                style="@style/Deifr.BlackBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Genre"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                android:id="@+id/tvGenre"
+                style="@style/Deifr.BlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                style="@style/Deifr.BlackBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                style="@style/Deifr.BlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                style="@style/Deifr.BlackBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Perilisan"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                android:id="@+id/tvRelease"
+                style="@style/Deifr.BlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                style="@style/Deifr.BlackBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Rumah Poduksi"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                android:id="@+id/tvHomprod"
+                style="@style/Deifr.BlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                style="@style/Deifr.BlackBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bahasa"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                android:id="@+id/tvBahasa"
+                style="@style/Deifr.BlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                style="@style/Deifr.BlackBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Vote"
+                app:layout_columnWeight="1" />
+
+            <TextView
+                android:id="@+id/tvVote"
+                style="@style/Deifr.BlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReview"
+            style="@style/PrimaryButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/gap16"
+            android:text="Review" />
+
+    </LinearLayout>
+
+</ScrollView>

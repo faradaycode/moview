@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gap10">10dp</dimen>
+    <dimen name="gap16">16dp</dimen>
+    <dimen name="materialSpinner">56dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="image_size">300dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+</resources>
