@@ -3,7 +3,7 @@
 
     <!--Primary-->
 
-    <color name="grey_cc">#f1f5ff</color>
+    <color name="grey_cc">#CFCFCF</color>
     <color name="colorPrimary">#3e4095</color>
     <color name="colorPrimaryDark">#001a66</color>
     <color name="colorAccent">#6f6ac4</color>

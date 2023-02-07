@@ -2,15 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/line_border"
+    android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="@dimen/default_gap">
 
     <TextView
         android:id="@+id/tvGenre"
         style="@style/Deifr.BlackBold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ellipsize="end" />
+        android:ellipsize="end"
+        android:textAlignment="center" />
 
 </LinearLayout>

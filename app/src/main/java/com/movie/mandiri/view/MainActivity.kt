@@ -57,9 +57,9 @@ class MainActivity : AppCompatActivity(),
     }
 
     private fun inita() {
-        binding.reviGenre.layoutManager = GridLayoutManager(context, 2)
+        binding.reviGenre.layoutManager = LinearLayoutManager(context)
         binding.reviGenre.setHasFixedSize(true)
-        binding.reviGenre.addItemDecoration(GridColumnSpacer(8))
+        binding.reviGenre.addItemDecoration(VerticalLinearDecoration(16))
         binding.reviGenre.adapter = adapter
         presenter.getGenres()
     }
